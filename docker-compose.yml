@@ -1,0 +1,11 @@
+version: '3'
+services:
+  monitor:
+    build: .
+    container_name: dirmonitor
+    volumes:
+      - ./app:/app
+      - ./target:/target
+      - ./start.sh:/start.sh
+    environment: 
+      target: '/target'
